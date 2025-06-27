@@ -1,14 +1,3 @@
-// Build a Book Organizer
-// Objective: Fulfill the user stories below and get all the tests
-// to pass to complete the lab.
-
-// User Stories:
-
-// 1. You should have an array of objects named books where each object
-// in the array should have a string title, another string authorName,
-// and a number releaseYear.
-// 2. Your books array should have a minimum of three objects.
-
 const books = [
   {
     title: "Here",
@@ -27,14 +16,6 @@ const books = [
   },
 ];
 
-// 3. You should have a callback function named sortByYear that accepts two
-// books as parameter for sorting the array.
-// 4. The sortByYear function should return -1 if the releaseYear of the first
-// book is smaller than that of the second book.
-// 5. The sortByYear function should return 1 if the releaseYear of the first
-// book is bigger than that of the second book.
-// 6. The sortByYear function should return 0 if both releaseYear values are equal.
-
 function sortByYear(book1, book2) {
   let sortResult = book1.releaseYear - book2.releaseYear;
 
@@ -47,15 +28,6 @@ function sortByYear(book1, book2) {
   }
 }
 
-// 7. You should filter out books written after a certain year such as
-// 1950 from the books array and save the filtered array in a new array
-// named filteredBooks.
-
 const filteredBooks = books.filter((book) => book.releaseYear > 1950);
-
-// 8. You should sort the books in the filteredBooks array according to
-// their releaseYear in ascending order. You learned in a prior lecture
-// video that the sort() method will sort the array in place. This means
-// the filteredBooks array will be mutated.
 
 filteredBooks.sort(sortByYear);
